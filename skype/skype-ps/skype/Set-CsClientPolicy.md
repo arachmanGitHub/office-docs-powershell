@@ -1239,7 +1239,9 @@ Accept wildcard characters: False
 ```
 
 ### -MAPIPollInterval
-Important: This parameter has been deprecated for use with Skype for Business Server.
+
+> [!IMPORTANT] 
+> This parameter has been deprecated for use with Skype for Business Server.
 
 For users of Microsoft Exchange Server 2003, MAPIPollInterval specifies how often Skype for Business retrieves calendar data from the Exchange public folders.
 MAPIPollInterval can be set to any value between 1 second and 1 hour; inclusive.
@@ -1806,7 +1808,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
 
 ```yaml
 Type: Object
@@ -1822,7 +1823,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableClientAutoPopulateWithTeam
-{{Fill EnableClientAutoPopulateWithTeam Description}}
+
+When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
 Type: Object
@@ -1838,7 +1840,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-{{Fill EnableExchangeContactsFolder Description}}
+
+When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
 Type: Object
@@ -1872,6 +1875,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceP2PAppSharing
+
 When set to True, allows a peer-to-peer application sharing session to exceed the maximum frame rate of 2.5 frames per second.
 The default value is False.
 
@@ -1906,7 +1910,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-{{Fill EnableOnlineFeedback Description}}
+
+When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
 Type: Object
@@ -1922,7 +1927,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedbackScreenshots
-{{Fill EnableOnlineFeedbackScreenshots Description}}
+
+When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
 Type: Object
@@ -2150,7 +2156,6 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

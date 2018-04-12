@@ -10,6 +10,13 @@ Activates or deactivates in the place records management feature.
 
 ## SYNTAX 
 
+### Enable or Disable
+```powershell
+Set-PnPInPlaceRecordsManagement -Enabled <Boolean>
+                                [-Web <WebPipeBind>]
+                                [-Connection <SPOnlineConnection>]
+```
+
 ### On
 ```powershell
 Set-PnPInPlaceRecordsManagement -On [<SwitchParameter>]
@@ -28,22 +35,52 @@ Set-PnPInPlaceRecordsManagement -Off [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -On
+Set-PnPInPlaceRecordsManagement -Enabled $true
 ```
 
 Activates In Place Records Management
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -Off
+Set-PnPInPlaceRecordsManagement -On
+```
+
+Activates In Place Records Management
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Set-PnPInPlaceRecordsManagement -Enabled $false
+```
+
+Deactivates In Place Records Management
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Set-PnPInPlaceRecordsManagement -Off
 ```
 
 Deactivates In Place Records Management
 
 ## PARAMETERS
 
+### -Enabled
+
+
+Only applicable to: SharePoint Online, SharePoint Server 2013
+
+```yaml
+Type: Boolean
+Parameter Sets: Enable or Disable
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Off
 Turn records management off
+
+Only applicable to: SharePoint Server 2016
 
 ```yaml
 Type: SwitchParameter
@@ -57,6 +94,8 @@ Accept pipeline input: False
 ### -On
 Turn records management on
 
+Only applicable to: SharePoint Server 2016
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: On
@@ -67,7 +106,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -79,7 +118,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind

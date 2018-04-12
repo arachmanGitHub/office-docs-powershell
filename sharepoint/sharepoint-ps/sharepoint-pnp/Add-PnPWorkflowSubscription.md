@@ -19,7 +19,7 @@ Add-PnPWorkflowSubscription -Name <String>
                             [-StartManually [<SwitchParameter>]]
                             [-StartOnCreated [<SwitchParameter>]]
                             [-StartOnChanged [<SwitchParameter>]]
-                            [-AssociationValues <Dictionary`2>]
+                            [-AssociationValues <String>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
 ```
@@ -53,7 +53,7 @@ Adds an Workflow with the name "SendMessageWf" to the list "MyCustomList".
 
 
 ```yaml
-Type: Dictionary`2
+Type: String
 Parameter Sets: (All)
 
 Required: False
@@ -158,7 +158,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -170,7 +170,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind

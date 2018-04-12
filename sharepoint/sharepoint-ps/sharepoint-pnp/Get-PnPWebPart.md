@@ -21,14 +21,14 @@ Get-PnPWebPart -ServerRelativePageUrl <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx"
+Get-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx"
 ```
 
 Returns all webparts defined on the given page.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
+Get-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
 Returns a specific webpart defined on the given page.
@@ -61,7 +61,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -73,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Web
-The GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
+This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
 
 ```yaml
 Type: WebPipeBind
@@ -86,7 +86,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [List<Microsoft.SharePoint.Client.WebParts.WebPartDefinition>](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.webparts.webpartdefinition.aspx)
+### List<Microsoft.SharePoint.Client.WebParts.WebPartDefinition>
 
 ## RELATED LINKS
 
