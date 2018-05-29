@@ -275,6 +275,182 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-WindowsLiveID <SmtpAddress>] [<CommonParameters>]
 ```
 
+### Set6
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>] [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-AccountDisabled <$true | $false>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
+ [-AntispamBypassEnabled <$true | $false>] [-ApplyMandatoryProperties] [-Arbitration]
+ [-ArbitrationMailbox <MailboxIdParameter>] [-ArchiveDatabase <DatabaseIdParameter>]
+ [-ArchiveDomain <SmtpDomain>] [-ArchiveName <MultiValuedProperty>] [-ArchiveQuota <Unlimited>]
+ [-ArchiveStatus <None | Active>] [-ArchiveWarningQuota <Unlimited>]
+ [-AttributesToClear <SetMailbox+ClearableADAttributes[]>] [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>] [-AuditEnabled <$true | $false>] [-AuditLog]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>] [-AuditOwner <MultiValuedProperty>]
+ [-AuditStorageEndTimeUTC <DateTime>] [-AuditStorageStartTimeUTC <DateTime>]
+ [-AuditStorageState <None | Online | Offline>] [-AuxAuditLog]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>] [-CalendarLoggingQuota <Unlimited>]
+ [-CalendarRepairDisabled <$true | $false>] [-CalendarVersionStoreDisabled <$true | $false>]
+ [-ClientExtensions <$true | $false>] [-Confirm] [-CreateDTMFMap <$true | $false>] [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>] [-CustomAttribute11 <String>] [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>] [-CustomAttribute14 <String>] [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>] [-CustomAttribute3 <String>] [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
+ [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
+ [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EnableRoomMailboxAccount <$true | $false>] [-EndDateForRetentionHold <DateTime>]
+ [-ExtendedPropertiesCountQuota <Int32>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <InternalOnly | External>] [-FederatedIdentity <String>]
+ [-FolderHierarchyChildrenCountReceiveQuota <Int32>] [-FolderHierarchyChildrenCountWarningQuota <Int32>]
+ [-FolderHierarchyDepthReceiveQuota <Int32>] [-FolderHierarchyDepthWarningQuota <Int32>]
+ [-FoldersCountReceiveQuota <Int32>] [-FoldersCountWarningQuota <Int32>] [-Force]
+ [-ForwardingAddress <RecipientIdParameter>] [-ForwardingSmtpAddress <ProxyAddress>] [-GMGen <$true | $false>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IgnoreDefaultScope] [-ImListMigrationCompleted <$true | $false>] [-ImmutableId <String>] [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <$true | $false>] [-IsHierarchyReady <$true | $false>]
+ [-IsHierarchySyncEnabled <$true | $false>] [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>] [-Languages <MultiValuedProperty>] [-LinkedCredential <PSCredential>]
+ [-LinkedDomainController <String>] [-LinkedMasterAccount <UserIdParameter>] [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldDuration <Unlimited>] [-LitigationHoldEnabled <$true | $false>]
+ [-LitigationHoldOwner <String>] [-MailboxMessagesPerFolderCountReceiveQuota <Int32>]
+ [-MailboxMessagesPerFolderCountWarningQuota <Int32>] [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
+ [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>] [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>] [-Management <$true | $false>] [-MaxBlockedSenders <Int32>]
+ [-MaxReceiveSize <Unlimited>] [-MaxSafeSenders <Int32>] [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <$true | $false>] [-MessageCopyForSentAsEnabled <$true | $false>]
+ [-MessageTracking <$true | $false>] [-MessageTrackingReadStatusEnabled <$true | $false>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>] [-Migration <$true | $false>] [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>] [-Name <String>] [-NewPassword <SecureString>]
+ [-OABGen <$true | $false>] [-OABReplica <$true | $false>] [-Office <String>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-OldPassword <SecureString>]
+ [-OMEncryption <$true | $false>] [-OMEncryptionStore <$true | $false>] [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>] [-ProhibitSendQuota <Unlimited>] [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph] [-PstProvider <$true | $false>] [-PublicFolder]
+ [-QueryBaseDN <OrganizationalUnitIdParameter>] [-RecipientLimits <Unlimited>]
+ [-RecoverableItemsQuota <Unlimited>] [-RecoverableItemsWarningQuota <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>] [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoteRecipientType <None | ProvisionMailbox | ProvisionArchive | Migrated | DeprovisionMailbox | DeprovisionArchive | RoomMailbox | EquipmentMailbox | SharedMailbox | TeamMailbox>]
+ [-RemoveManagedFolderAndPolicy] [-RemovePicture] [-RemoveSpokenName]
+ [-RequireSenderAuthenticationEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResourceCapacity <Int32>] [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-RetentionComment <String>] [-RetentionHoldEnabled <$true | $false>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>] [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>] [-SamAccountName <String>] [-SCLDeleteEnabled <$true | $false>]
+ [-SCLDeleteThreshold <Int32>] [-SCLJunkEnabled <$true | $false>] [-SCLJunkThreshold <Int32>]
+ [-SCLQuarantineEnabled <$true | $false>] [-SCLQuarantineThreshold <Int32>]
+ [-SCLRejectEnabled <$true | $false>] [-SCLRejectThreshold <Int32>] [-SecondaryAddress <String>]
+ [-SecondaryDialPlan <UMDialPlanIdParameter>] [-SendModerationNotifications <Never | Internal | Always>]
+ [-SharingPolicy <SharingPolicyIdParameter>] [-SiloName <String>] [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <$true | $false>] [-SkipDualWrite] [-SkipMailboxProvisioningConstraintValidation]
+ [-StartDateForRetentionHold <DateTime>] [-StsRefreshTokensValidFrom <DateTime>]
+ [-SystemMessageSizeShutoffQuota <Int64>] [-SystemMessageSizeWarningQuota <Int64>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-Type <Regular | Room | Equipment | Shared>]
+ [-UMDataStorage <$true | $false>] [-UMDtmfMap <MultiValuedProperty>] [-UMGrammar <$true | $false>]
+ [-UseDatabaseQuotaDefaults <$true | $false>] [-UseDatabaseRetentionDefaults <$true | $false>]
+ [-UserCertificate <MultiValuedProperty>] [-UserPrincipalName <String>]
+ [-UserSMimeCertificate <MultiValuedProperty>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>]
+ [-WindowsLiveID <SmtpAddress>] [<CommonParameters>]
+```
+
+### Set7
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>] [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-AccountDisabled <$true | $false>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>]
+ [-AntispamBypassEnabled <$true | $false>] [-ApplyMandatoryProperties] [-Arbitration]
+ [-ArbitrationMailbox <MailboxIdParameter>] [-ArchiveDatabase <DatabaseIdParameter>]
+ [-ArchiveDomain <SmtpDomain>] [-ArchiveName <MultiValuedProperty>] [-ArchiveQuota <Unlimited>]
+ [-ArchiveStatus <None | Active>] [-ArchiveWarningQuota <Unlimited>]
+ [-AttributesToClear <SetMailbox+ClearableADAttributes[]>] [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>] [-AuditEnabled <$true | $false>] [-AuditLog]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>] [-AuditOwner <MultiValuedProperty>]
+ [-AuditStorageEndTimeUTC <DateTime>] [-AuditStorageStartTimeUTC <DateTime>]
+ [-AuditStorageState <None | Online | Offline>] [-AuxAuditLog]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>] [-CalendarLoggingQuota <Unlimited>]
+ [-CalendarRepairDisabled <$true | $false>] [-CalendarVersionStoreDisabled <$true | $false>]
+ [-ClientExtensions <$true | $false>] [-Confirm] [-CreateDTMFMap <$true | $false>] [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>] [-CustomAttribute11 <String>] [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>] [-CustomAttribute14 <String>] [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>] [-CustomAttribute3 <String>] [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
+ [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
+ [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
+ [-EnableRoomMailboxAccount <$true | $false>] [-EndDateForRetentionHold <DateTime>]
+ [-ExtendedPropertiesCountQuota <Int32>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <InternalOnly | External>] [-FederatedIdentity <String>]
+ [-FolderHierarchyChildrenCountReceiveQuota <Int32>] [-FolderHierarchyChildrenCountWarningQuota <Int32>]
+ [-FolderHierarchyDepthReceiveQuota <Int32>] [-FolderHierarchyDepthWarningQuota <Int32>]
+ [-FoldersCountReceiveQuota <Int32>] [-FoldersCountWarningQuota <Int32>] [-Force]
+ [-ForwardingAddress <RecipientIdParameter>] [-ForwardingSmtpAddress <ProxyAddress>] [-GMGen <$true | $false>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IgnoreDefaultScope] [-ImListMigrationCompleted <$true | $false>] [-ImmutableId <String>] [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <$true | $false>] [-IsHierarchyReady <$true | $false>]
+ [-IsHierarchySyncEnabled <$true | $false>] [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>] [-Languages <MultiValuedProperty>] [-LinkedCredential <PSCredential>]
+ [-LinkedDomainController <String>] [-LinkedMasterAccount <UserIdParameter>] [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldDuration <Unlimited>] [-LitigationHoldEnabled <$true | $false>]
+ [-LitigationHoldOwner <String>] [-MailboxMessagesPerFolderCountReceiveQuota <Int32>]
+ [-MailboxMessagesPerFolderCountWarningQuota <Int32>] [-MailboxPlan <MailboxPlanIdParameter>]
+ [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
+ [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MailboxRegion <String>] [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>] [-Management <$true | $false>] [-MaxBlockedSenders <Int32>]
+ [-MaxReceiveSize <Unlimited>] [-MaxSafeSenders <Int32>] [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <$true | $false>] [-MessageCopyForSentAsEnabled <$true | $false>]
+ [-MessageTracking <$true | $false>] [-MessageTrackingReadStatusEnabled <$true | $false>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>] [-Migration <$true | $false>] [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>] [-Name <String>] [-NewPassword <SecureString>]
+ [-OABGen <$true | $false>] [-OABReplica <$true | $false>] [-Office <String>]
+ [-OfflineAddressBook <OfflineAddressBookIdParameter>] [-OldPassword <SecureString>]
+ [-OMEncryption <$true | $false>] [-OMEncryptionStore <$true | $false>] [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>] [-ProhibitSendQuota <Unlimited>] [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph] [-PstProvider <$true | $false>] [-PublicFolder]
+ [-QueryBaseDN <OrganizationalUnitIdParameter>] [-RecipientLimits <Unlimited>]
+ [-RecoverableItemsQuota <Unlimited>] [-RecoverableItemsWarningQuota <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>] [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoteRecipientType <None | ProvisionMailbox | ProvisionArchive | Migrated | DeprovisionMailbox | DeprovisionArchive | RoomMailbox | EquipmentMailbox | SharedMailbox | TeamMailbox>]
+ [-RemoveManagedFolderAndPolicy] [-RemovePicture] [-RemoveSpokenName]
+ [-RequireSenderAuthenticationEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
+ [-ResourceCapacity <Int32>] [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-RetainDeletedItemsUntilBackup <$true | $false>]
+ [-RetentionComment <String>] [-RetentionHoldEnabled <$true | $false>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>] [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>] [-SamAccountName <String>] [-SCLDeleteEnabled <$true | $false>]
+ [-SCLDeleteThreshold <Int32>] [-SCLJunkEnabled <$true | $false>] [-SCLJunkThreshold <Int32>]
+ [-SCLQuarantineEnabled <$true | $false>] [-SCLQuarantineThreshold <Int32>]
+ [-SCLRejectEnabled <$true | $false>] [-SCLRejectThreshold <Int32>] [-SecondaryAddress <String>]
+ [-SecondaryDialPlan <UMDialPlanIdParameter>] [-SendModerationNotifications <Never | Internal | Always>]
+ [-SharingPolicy <SharingPolicyIdParameter>] [-SiloName <String>] [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <$true | $false>] [-SkipDualWrite] [-SkipMailboxProvisioningConstraintValidation]
+ [-StartDateForRetentionHold <DateTime>] [-StsRefreshTokensValidFrom <DateTime>]
+ [-SystemMessageSizeShutoffQuota <Int64>] [-SystemMessageSizeWarningQuota <Int64>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [-Type <Regular | Room | Equipment | Shared>]
+ [-UMDataStorage <$true | $false>] [-UMDtmfMap <MultiValuedProperty>] [-UMGrammar <$true | $false>]
+ [-UseDatabaseQuotaDefaults <$true | $false>] [-UseDatabaseRetentionDefaults <$true | $false>]
+ [-UserCertificate <MultiValuedProperty>] [-UserPrincipalName <String>]
+ [-UserSMimeCertificate <MultiValuedProperty>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>]
+ [-WindowsLiveID <SmtpAddress>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You can use this cmdlet for one mailbox at a time. To perform bulk management, you can pipeline the output of various Get- cmdlets (for example, the Get-Mailbox or Get-User cmdlets) and configure several mailboxes in a single-line command. You can also use the Set-Mailbox cmdlet in scripts.
 
@@ -549,7 +725,7 @@ The AntispamBypassEnabled parameter specifies whether to skip anti-spam processi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -589,7 +765,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -630,7 +806,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -653,7 +829,7 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -672,7 +848,7 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 Type: SmtpDomain
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -722,7 +898,7 @@ The ArchiveQuota value must be greater than or equal to the ArchiveWarningQuota 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -770,7 +946,7 @@ The ArchiveWarningQuota value must be less than or equal to the ArchiveQuota val
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1306,7 +1482,7 @@ Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1380,7 +1556,7 @@ The DowngradeHighPriorityMessagesEnabled parameter specifies whether to prevent 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1440,7 +1616,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1458,6 +1634,46 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFromAllOrgHolds
+This parameter is available only in Exchange Online.
+
+The ExcludeFromAllOrgHolds switch excludes the mailbox from all organization-wide Office 365 retention policies. This switch can only be used for inactive mailboxes. You don't need to specify a value with this switch.
+
+When you use this switch, use the DistinguishedName or ExchangeGuid property value for the identity of the inactive mailbox (those are the only values that guarantee uniqueness).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Set6
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFromOrgHolds
+This parameter is available only in Exchange Online.
+
+The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Office 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Office 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Office 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Note that retention policies assigned to mailboxes are prefaced by 'mbx'.
+
+You can specify multiple values for this parameter by using the syntax “GUID1”,”GUID2”,…”GUIDX”.
+
+When you use this parameter, use the DistinguishedName or ExchangeGuid property value for the identity of the inactive mailbox (those are the values that guarantee uniqueness).
+
+```yaml
+Type: String[]
+Parameter Sets: Set7
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1756,7 +1972,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1848,7 +2064,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1865,7 +2081,7 @@ The LinkedDomainController parameter specifies the domain controller in the fore
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1894,7 +2110,7 @@ For example:
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2057,7 +2273,7 @@ The MaxBlockedSenders parameter specifies the maximum number of senders that can
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2098,7 +2314,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2115,7 +2331,7 @@ The MaxSafeSenders parameter specifies the maximum number of senders that can be
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2286,7 +2502,7 @@ Use the Get-OfflineAddressBook cmdlet to see the available offline address books
 Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2326,7 +2542,7 @@ If you set the EmailAddressPolicyEnabled parameter to $false, you can specify th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2417,7 +2633,7 @@ The value unlimited indicates the maximum number of recipients per message for t
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2454,7 +2670,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2491,7 +2707,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2644,7 +2860,7 @@ You don't need to specify a value with this switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2663,7 +2879,7 @@ You can add a picture to a mailbox by using the Import-RecipientDataProperty cmd
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2682,7 +2898,7 @@ You can add a sound file to a mailbox by using the Import-RecipientDataProperty 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2724,7 +2940,7 @@ In Office 365, administrators can require users to reset their password the next
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2820,7 +3036,7 @@ The default value is configured by the value of the DeletedItemRetention paramet
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2969,7 +3185,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2992,7 +3208,7 @@ The SCLDeleteEnabled parameter specifies whether to silently delete messages tha
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3011,7 +3227,7 @@ A valid value is an integer from 0 through 9. This value should be greater than 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3034,7 +3250,7 @@ The SCLJunkEnabled parameter specifies whether messages that exceed(not meet) th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3053,7 +3269,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3078,7 +3294,7 @@ To configure the quarantine mailbox, see Configure a spam quarantine mailbox (ht
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3097,7 +3313,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3120,7 +3336,7 @@ The SCLRejectEnabled parameter specifies whether messages that meet or exceed th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3139,7 +3355,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3301,7 +3517,7 @@ Use the Get-ThrottlingPolicy cmdlet to see the available throttling policies.
 Type: ThrottlingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3390,7 +3606,7 @@ The applicable quota values are:
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3411,7 +3627,7 @@ The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3458,7 +3674,7 @@ The UserSMimeCertificate parameter specifies the S/MIME certificate that's used 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3511,7 +3727,7 @@ The WindowsLiveID parameter renames the Microsoft account (formerly known as a W
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -3534,7 +3750,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3571,7 +3787,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3590,7 +3806,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3683,7 +3899,7 @@ The ExtendedPropertiesCountQuota property is used to configure the Named Propert
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3702,7 +3918,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3721,7 +3937,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3740,7 +3956,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3759,7 +3975,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3778,7 +3994,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3797,7 +4013,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3816,7 +4032,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3992,7 +4208,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4055,9 +4271,9 @@ Valid values are$true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: FalseNamed
+Position: 
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -4104,7 +4320,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4123,7 +4339,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4142,7 +4358,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4255,7 +4471,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4274,7 +4490,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4295,7 +4511,7 @@ You use this switch with the InactiveMailbox switch and the Identity parameter (
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -4314,7 +4530,7 @@ The removal of a hold from a mailbox is temporarily delayed to prevent the accid
 Type: SwitchParameter
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -4338,7 +4554,7 @@ The AccountDisabled switch specifies whether to disable the account that's assoc
 Type: $true | $false
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4421,7 +4637,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4446,7 +4662,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4467,7 +4683,7 @@ The ElcProcessingDisabled parameter specifies whether to prevent the Managed Fol
 Type: $true | $false
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4492,7 +4708,7 @@ You can't use this switch to modify other properties on inactive mailboxes.
 Type: SwitchParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

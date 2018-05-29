@@ -1,3 +1,8 @@
+---
+title: PnP PowerShell overview 
+description: Introduction to PnP PowerShell cmdlets.
+ms.date: 5/12/2018
+---
 # PnP PowerShell overview
 
 SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
@@ -431,6 +436,9 @@ Cmdlet|Description|Platform
 **[Remove&#8209;PnPHubSiteAssociation](../../sharepoint-ps/sharepoint-pnp/Remove-PnPHubSiteAssociation.md)** |Disconnects a site from a hubsite.|SharePoint Online
 **[Grant&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPHubSiteRights.md)** |Retrieve all or a specific hubsite.|SharePoint Online
 **[Add&#8209;PnPOffice365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPOffice365GroupToSite.md)** |Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group|SharePoint Online
+**[Disable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Disable-PnPPowerShellTelemetry.md)** |Disables PnP PowerShell telemetry tracking|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Enable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Enable-PnPPowerShellTelemetry.md)** |Enables PnP PowerShell telemetry tracking.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Get&#8209;PnPPowerShellTelemetryEnabled](../../sharepoint-ps/sharepoint-pnp/Get-PnPPowerShellTelemetryEnabled.md)** |Returns true if the PnP PowerShell Telemetry has been enabled.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[New&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/New-PnPSite.md)** |BETA: This cmdlet is using early release APIs. Notice that functionality and parameters can change. Creates a new site collection|SharePoint Online
 **[Add&#8209;PnPSiteCollectionAppCatalog](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteCollectionAppCatalog.md)** |Adds a Site Collection scoped App Catalog to a site|SharePoint Online
 **[Remove&#8209;PnPSiteCollectionAppCatalog](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteCollectionAppCatalog.md)** |Removes a Site Collection scoped App Catalog from a site|SharePoint Online
@@ -446,9 +454,9 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteScript.md)** |Retrieve Site Scripts that have been registered on the current tenant.|SharePoint Online
 **[Remove&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteScript.md)** |Removes a Site Script|SharePoint Online
 **[Set&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Set-PnPSiteScript.md)** |Updates an existing Site Script on the current tenant.|SharePoint Online
-**[Get&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Get-PnPStorageEntity.md)** |Retrieve Storage Entities / Farm Properties.|SharePoint Online
-**[Remove&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStorageEntity.md)** |Remove Storage Entities / Farm Properties.|SharePoint Online
-**[Set&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Set-PnPStorageEntity.md)** |Set Storage Entities / Farm Properties.|SharePoint Online
+**[Get&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Get-PnPStorageEntity.md)** |Retrieve Storage Entities / Farm Properties from either the Tenant App Catalog or from the current site if it has a site scope app catalog.|SharePoint Online
+**[Remove&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStorageEntity.md)** |Remove Storage Entities / Farm Properties from either the tenant scoped app catalog or the current site collection if the site has a site collection scoped app catalog|SharePoint Online
+**[Set&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Set-PnPStorageEntity.md)** |Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.|SharePoint Online
 **[Get&#8209;PnPTenant](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenant.md)** |Returns organization-level site collection properties|SharePoint Online
 **[Set&#8209;PnPTenant](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenant.md)** |Sets organization-level site collection properties|SharePoint Online
 **[Get&#8209;PnPTenantAppCatalogUrl](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantAppCatalogUrl.md)** |Retrieves the url of the tenant scoped app catalog.|SharePoint Online
@@ -461,6 +469,14 @@ Cmdlet|Description|Platform
 **[Set&#8209;PnPTenantCdnPolicy](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantCdnPolicy.md)** |Sets the CDN Policies for the specified CDN (Public | Private).|SharePoint Online
 **[Clear&#8209;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Clear-PnPTenantRecycleBinItem.md)** |Permanently deletes a site collection from the tenant scoped recycle bin|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Restore&#8209;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Restore-PnPTenantRecycleBinItem.md)** |Restores a site collection from the tenant scoped recycle bin|SharePoint Online
+**[Disable&#8209;PnPTenantServicePrincipal](../../sharepoint-ps/sharepoint-pnp/Disable-PnPTenantServicePrincipal.md)** |Enables the current tenant's "SharePoint Online Client" service principal.|SharePoint Online
+**[Enable&#8209;PnPTenantServicePrincipal](../../sharepoint-ps/sharepoint-pnp/Enable-PnPTenantServicePrincipal.md)** |Enables the current tenant's "SharePoint Online Client" service principal.|SharePoint Online
+**[Get&#8209;PnPTenantServicePrincipal](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantServicePrincipal.md)** |Returns the current tenant's "SharePoint Online Client" service principal.|SharePoint Online
+**[Revoke&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Revoke-PnPTenantServicePrincipalPermission.md)** |Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.|SharePoint Online
+**[Get&#8209;PnPTenantServicePrincipalPermissionGrants](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantServicePrincipalPermissionGrants.md)** |Gets the collection of permission grants for the "SharePoint Online Client" service principal|SharePoint Online
+**[Approve&#8209;PnPTenantServicePrincipalPermissionRequest](../../sharepoint-ps/sharepoint-pnp/Approve-PnPTenantServicePrincipalPermissionRequest.md)** |Approves a permission request for the current tenant's "SharePoint Online Client" service principal|SharePoint Online
+**[Deny&#8209;PnPTenantServicePrincipalPermissionRequest](../../sharepoint-ps/sharepoint-pnp/Deny-PnPTenantServicePrincipalPermissionRequest.md)** |Denies a permission request for the current tenant's "SharePoint Online Client" service principal|SharePoint Online
+**[Get&#8209;PnPTenantServicePrincipalPermissionRequests](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantServicePrincipalPermissionRequests.md)** |Gets the collection of permission requests for the "SharePoint Online Client" service principal|SharePoint Online
 **[Get&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSite.md)** |Retrieve site information.|SharePoint Online
 **[New&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSite.md)** |Creates a new site collection for the current tenant|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTenantSite.md)** |Removes a site collection|SharePoint Online
@@ -475,7 +491,7 @@ Cmdlet|Description|Platform
 ### User and group management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPGroup.md)** |Returns a specific group or all groups.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Get&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPGroup.md)** |Returns a specific SharePoint group or all SharePoint groups in site.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[New&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPGroup.md)** |Adds group to the Site Groups List and returns a group object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPGroup.md)** |Removes a group from a web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPGroup.md)** |Updates a group|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online

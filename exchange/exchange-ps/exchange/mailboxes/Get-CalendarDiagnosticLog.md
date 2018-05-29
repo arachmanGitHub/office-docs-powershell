@@ -185,7 +185,7 @@ This parameter requires the creation and passing of a credential object. This cr
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +242,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-This parameter is reserved for internal Microsoft use. A maximum of 1000 results are returned by this cmdlet.
+This parameter determines the number of results returned by the cmdlet. The maximum value is 1000.
 
 ```yaml
 Type: Unlimited
